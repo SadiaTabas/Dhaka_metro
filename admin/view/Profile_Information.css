@@ -1,0 +1,135 @@
+/* Page background */
+body {
+    background-color: #f4fdf4; /* light greenish-white */
+    font-family: Arial, sans-serif;
+}
+
+/* Main profile box */
+.pro-box {
+    width: 55%;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border: 2px solid #006400; /* secondary green */
+    border-radius: 8px;
+    padding: 25px;
+}
+
+/* Fieldset styling */
+fieldset {
+    border: 2px solid #006400;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+/* Legend  */
+legend {
+    font-size: 22px;
+    font-weight: bold;
+    color: #006400;
+    padding: 0 10px;
+}
+
+/* Table layout */
+table {
+    width: 100%;
+    border-spacing: 15px;
+}
+
+/* Labels */
+td:first-child {
+    font-weight: bold;
+    color: #006400; /* secondary green */
+    width: 35%;
+}
+
+/* Inputs & select */
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #006400; /* secondary green */
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+/* Readonly fields */
+input[readonly] {
+    background-color: #e9f5e9;
+    color: #333;
+}
+/*  Submit button */
+input[type="submit"] {
+    background-color: #006400;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Update button hover */
+input[type="submit"]:hover {
+    background-color: #004d00; 
+}
+
+
+
+
+
+/* ===== Buttons ===== */
+input[type="submit"],
+button {
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Save Button */
+input[type="submit"] {
+    background-color: #006400;
+    color: #ffffff;
+}
+
+
+
+
+
+
+input[type="submit"]:hover {
+    background-color: #004d00;
+}
+
+/* Cancel Button */
+button {
+    background-color: transparent;
+    color: #1D75F0;
+    border: 2px solid #1D75F0;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #F0320C;
+    color: #ffffff;
+}
+
+
+
+
+/* Success & error messages */
+p {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Links inside header in dashboard.css */
+.header-right a {
+    color: #1D75F0; /* bright blue */
+}
+
+.header-right a:hover {
+    color: #006400; /* green hover */
+}

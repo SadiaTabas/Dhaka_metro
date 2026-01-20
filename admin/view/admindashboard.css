@@ -1,0 +1,102 @@
+/* Global Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4fdf4;
+}
+
+/*  Dashboard Wrapper */
+.admindashboard {
+    margin: 20px 100px;
+    padding: 30px;
+}
+
+/*  Section*/
+.section {
+    background-color: #ffffff;
+    border: 2px solid #006400;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    color: #006400;
+    border-bottom: 2px solid #006400;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+}
+
+/*Overview */
+.overview {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    border: 2px solid #006400;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card p {
+    font-size: 26px;
+    font-weight: bold;
+    color: #006400;
+}
+
+/* Tables*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+thead {
+    background-color: #006400;
+    color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+/* ADD buttons (Add Route / Add Staff) */
+.btn-add {
+    background-color: #006400;
+    color: #ffffff;
+}
+
+.btn-add:hover {
+    background-color: #004d00;
+}
+
+/* DELETE buttons */
+.btn-delete {
+    background-color: transparent;
+    color: #F0320C;
+    border: 2px solid #F0320C;
+}
+
+.btn-delete:hover {
+    background-color: #F0320C;
+    color: #ffffff;
+}
