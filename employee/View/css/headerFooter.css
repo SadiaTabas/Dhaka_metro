@@ -1,0 +1,62 @@
+/* ===== Header ===== */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: #ffffff; /* Changed from rgba to solid white */
+    backdrop-filter: none; /* Remove blur if you want solid white */
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional subtle shadow */
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    color: red !important;
+    font-size: 20px;
+}
+
+/* Nav links */
+.main-header nav a {
+    color: blue !important;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main-header nav a:hover {
+    color: #0056b3 !important;
+}
+
+/* ===== Footer ===== */
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #ffffff; /* Changed from rgba to solid white */
+    backdrop-filter: none; /* Remove blur for solid white */
+    color: green !important;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.1); /* optional subtle shadow */
+}

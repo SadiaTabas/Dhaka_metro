@@ -1,0 +1,133 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4fdf4;
+    min-height: 100vh;
+    padding-top: 90px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Wrapper ===== */
+.extend-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Form Card ===== */
+form {
+    width: 400px;
+    background-color: #ffffff;
+    border: 2px solid #006400;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* ===== Heading ===== */
+form h2 {
+    text-align: center;
+    color: #006400;
+    border-bottom: 2px solid #006400;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* ===== Message ===== */
+.message {
+    text-align: center;
+    color: #F0320C;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* ===== Rows ===== */
+.row {
+    margin-bottom: 18px;
+}
+
+.row label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #006400;
+    margin-bottom: 6px;
+}
+
+.row input, .row select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #006400;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.row input:focus, .row select:focus {
+    border-color: #004d00;
+    box-shadow: 0 0 5px rgba(0,100,0,0.3);
+}
+
+/* ===== Button ===== */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #006400;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #004d00;
+}
+
+/* ===== Back Button ===== */
+.back-btn-wrapper {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.back-btn {
+    color: #006400;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+/* ===== Note ===== */
+.note {
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* ===== JS Validation Errors ===== */
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+    display: block;
+}
+
+input.error, select.error {
+    border: 1.5px solid red;
+}

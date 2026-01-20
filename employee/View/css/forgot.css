@@ -1,0 +1,123 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4fdf4;
+    min-height: 100vh;
+    
+    /* Header/Footer safe spacing */
+    padding-top: 90px;   /* header */
+    padding-bottom: 60px; /* footer */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Wrapper ===== */
+.forgot-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Form Card ===== */
+form {
+    width: 380px;
+    background-color: #ffffff;
+    border: 2px solid #006400;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Heading ===== */
+form h2 {
+    text-align: center;
+    color: #006400;
+    border-bottom: 2px solid #006400;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* ===== Row ===== */
+.row {
+    margin-bottom: 18px;
+}
+
+.row label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #006400;
+    margin-bottom: 6px;
+}
+
+.row input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #006400;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+.row input:focus {
+    border-color: #004d00;
+    box-shadow: 0 0 5px rgba(0, 100, 0, 0.3);
+}
+
+.row span {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: red;
+}
+
+/* ===== Error Message ===== */
+.error-msg {
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* ===== Button ===== */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #006400;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #004d00;
+}
+
+/* ===== Back Link ===== */
+.back-login {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.back-login a {
+    color: #006400;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.back-login a:hover {
+    text-decoration: underline;
+}
