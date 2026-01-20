@@ -9,7 +9,7 @@
     <div class="header-right">
         <nav>
             <a href="employeDashboard.php">Home</a>
-            <a href="signup.php">Sign Up</a>
+            <a href="/Dhaka_metro/passenger/view/signup.php">Sign Up</a>
             <a href="history.php">History</a>
             <a href="login.php">Login</a>
             <a href="logout.php">Logout</a>
