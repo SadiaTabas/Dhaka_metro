@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-
+// Get session message and clear it
 $message = $_SESSION['msg'] ?? '';
 unset($_SESSION['msg']); 
 ?>
@@ -30,14 +30,16 @@ unset($_SESSION['msg']);
 
             <!-- PHP status message -->
             <?php if ($message): ?>
-                <div class="status-msg <?php echo $message === "ticket confirm" ? "status-confirm" : "status-cancel"; ?>">
+                <div class="status-msg <?php 
+                    echo strpos(strtolower($message), 'confirm') !== false ? "status-confirm" : "status-cancel"; 
+                ?>">
                     <?php echo htmlspecialchars($message); ?>
                 </div>
             <?php endif; ?>
 
             <div class="row">
-                <label>Ticket ID</label>
-                <input type="text" name="ticket_id" placeholder="Enter Ticket ID">
+                <label>Mobile Number</label>
+                <input type="text" name="mobile_number" placeholder="Enter User Mobile Number">
             </div>
 
             <div class="row">
@@ -56,7 +58,7 @@ unset($_SESSION['msg']);
             </div>
 
             <div class="note">
-                Make sure to verify the ticket ID and action before submitting
+                Make sure to verify the mobile number and action before submitting
             </div>
         </form>
     </div>

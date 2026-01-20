@@ -1,49 +1,72 @@
 <?php
 session_start();
-require_once('../Model/db.php'); // Adjust path if needed
+require_once('../Model/db.php'); // Make sure this path is correct
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $ticketID = trim($_POST['ticket_id'] ?? '');
-    $action   = $_POST['action'] ?? '';
+    $mobileNumber = trim($_POST['mobile_number'] ?? '');
+    $action       = $_POST['action'] ?? '';
 
-    if (empty($ticketID)) {
-        $_SESSION['msg'] = "Ticket ID is required.";
+    // Validate input
+    if (empty($mobileNumber)) {
+        $_SESSION['msg'] = "Mobile number is required.";
         header("Location: ../View/php/ticketManagement.php");
         exit();
     }
 
-    // Check if ticket exists
-    $stmt = $conn->prepare("SELECT TicketID FROM tickets WHERE TicketID = ?");
-    $stmt->bind_param("i", $ticketID);
+    if (empty($action)) {
+        $_SESSION['msg'] = "Please select an action.";
+        header("Location: ../View/php/ticketManagement.php");
+        exit();
+    }
+
+    // Step 1: Check if mobile number exists in users table
+    $stmt = $conn->prepare("SELECT UserID FROM users WHERE mobile = ?"); // <-- change 'mobile' to your column name
+    if (!$stmt) {
+        $_SESSION['msg'] = "Database error: " . $conn->error;
+        header("Location: ../View/php/ticketManagement.php");
+        exit();
+    }
+
+    $stmt->bind_param("s", $mobileNumber);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // Ticket exists → update status
-        $updateStmt = $conn->prepare("UPDATE tickets SET Status = ? WHERE TicketID = ?");
-        $updateStmt->bind_param("si", $action, $ticketID);
+        $user = $result->fetch_assoc();
+        $userID = $user['UserID'];
+
+        // Step 2: Update ticket status for this user
+        $updateStmt = $conn->prepare("UPDATE tickets SET Status = ? WHERE UserID = ?");
+        if (!$updateStmt) {
+            $_SESSION['msg'] = "Database error: " . $conn->error;
+            header("Location: ../View/php/ticketManagement.php");
+            exit();
+        }
+
+        $updateStmt->bind_param("si", $action, $userID);
 
         if ($updateStmt->execute()) {
             if ($action === "Confirmed") {
-                $_SESSION['msg'] = "ticket confirm";
+                $_SESSION['msg'] = "Ticket confirmed successfully.";
             } elseif ($action === "Cancelled") {
-                $_SESSION['msg'] = "ticket cancle";
+                $_SESSION['msg'] = "Ticket cancelled successfully.";
+            } else {
+                $_SESSION['msg'] = "Ticket status updated.";
             }
         } else {
             $_SESSION['msg'] = "Error updating ticket status.";
         }
+
         $updateStmt->close();
     } else {
-        // Ticket not found
-        $_SESSION['msg'] = "ticket not found";
+        $_SESSION['msg'] = "Mobile number not found.";
     }
 
     $stmt->close();
     $conn->close();
 
-    // Redirect back to the same page to show message
+    // Redirect back to form page
     header("Location: ../View/php/ticketManagement.php");
     exit();
 }
 ?>
-
