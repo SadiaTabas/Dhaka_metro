@@ -1,0 +1,129 @@
+ 
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+ 
+ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4fdf4;
+    display: flex;
+    flex-direction: column;
+}
+ 
+ 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+}
+ 
+.header-left {
+    display: flex;
+    align-items: center;
+}
+ 
+.logo {
+    width: 60px;
+    margin-right: 10px;
+}
+ 
+.header-left h1 {
+    color: #F0320C;
+    font-size: 28px;
+    margin: 0;
+}
+ 
+.header-right a {
+    color: #1D75F0;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+ 
+.header-right a:hover {
+    color: #006400;
+}
+ 
+ 
+.payment-box {
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 2px solid #006400;
+    border-radius: 8px;
+}
+ 
+ 
+.payment-form {
+    padding: 30px;
+}
+ 
+ 
+.payment-form h2 {
+    color: #006400;           
+    text-align: center;        
+    margin-bottom: 20px;
+}
+ 
+ 
+.payment-form label,
+.payment-form p {
+    color: #006400;            
+    font-weight: bold;
+    margin-top: 10px;
+}
+ 
+ 
+.fare-amount {
+    color: black;
+}
+ 
+ 
+.payment-form input[type=text],
+.payment-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #006400;
+    border-radius: 4px;
+    background-color: white;
+}
+ 
+ 
+.payment-form button {
+    width: 45%;
+    padding: 10px;
+    background-color: #006400;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 10px 5px 0 0;
+    cursor: pointer;
+}
+ 
+.payment-form button:hover {
+    background-color: #004d00;
+}
+ 
+ 
+.disclaimer {
+    color: red!important;
+    font-size: 12px;
+    margin: 12px 0;
+    font-weight: bold;
+}
+ 
+ 
+ 
+ 
+.footer {
+    text-align: center;
+    color: #006400;
+    padding: 5px 0;
+}

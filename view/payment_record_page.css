@@ -1,0 +1,134 @@
+ 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.header-left h1 {
+    color: #F0320C;
+    font-size: 28px;
+    margin: 0;
+}
+
+.header-right a {
+    color: #1D75F0;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.header-right a:hover {
+    color: #006400;
+}
+ 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4fff4;
+}
+
+ 
+.user-info {
+    margin: 20px 60px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006400;
+}
+ 
+.dashboard-box {
+    width: 700px;
+    margin: 70px auto;
+    padding: 25px;
+    border: 2px solid #006400;
+    border-radius: 10px;
+    background-color: #ffffff;
+     
+    display: flex;
+    flex-direction: column; 
+}
+
+.button-area {
+    width: 100%;  
+    margin-bottom: 20px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;  
+    margin-bottom: 10px;
+}
+
+.button-row .btn {
+    width: 30%;  
+    padding: 10px;
+    background-color: #006400;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;  
+}
+
+.button-row .btn:last-child {
+    margin-right: 0;
+}
+
+.button-row .btn:hover {
+    background-color: #004d00;
+}
+
+ 
+#resultArea {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;  
+    clear: both;
+}
+
+ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    background-color: #006400;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #006400;
+    text-align: center;
+    font-size: 14px;
+}
+
+ 
+.action-btn {
+    background-color: #b00000;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    
+    font-size: 13px;
+}
+
+.action-btn:hover {
+    background-color: #800000;
+}
