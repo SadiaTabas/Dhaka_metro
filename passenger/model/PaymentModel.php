@@ -26,33 +26,38 @@ function addTransaction($userID, $amount, $type, $ref) {
 }
 
  
-function addPayment($routeID, $amount) {
+function addPayment($ticketID, $amount) {
     global $conn;
     $sql = "INSERT INTO payments (TicketID, Amount, Status)
-            VALUES ($routeID, $amount, 'Success')";
+            VALUES ($ticketID, $amount, 'Success')";
     return mysqli_query($conn, $sql);
 }
 
  
 function getRouteFare($routeID) {
     global $conn;
+
     $sql = "SELECT Fare FROM routes WHERE RouteID=$routeID";
     $result = mysqli_query($conn, $sql);
+
+    if (!$result || mysqli_num_rows($result) == 0) {
+        return 0;
+    }
+
     $row = mysqli_fetch_assoc($result);
-    return $row['Fare'] ?? 0;
+    return $row['Fare'];
 }
- 
-function createTicket($userID, $routeID) {
+
+
+function createTicket($userID, $routeID, $journeyDate) {
     global $conn;
-
-    $sql = "INSERT INTO tickets (UserID, RouteID, Status)
-            VALUES ($userID, $routeID, 'Pending')";
-
+    $sql = "INSERT INTO tickets (UserID, RouteID, JourneyDate, Status)
+            VALUES ($userID, $routeID, '$journeyDate', 'Confirmed')";
     mysqli_query($conn, $sql);
-    return mysqli_insert_id($conn);  
+    return mysqli_insert_id($conn);
 }
-function markTicketPaid($ticketID) {
-    global $conn;
-    $sql = "UPDATE tickets SET Status='Paid' WHERE TicketID=$ticketID";
-    return mysqli_query($conn, $sql);
-}
+
+
+ 
+
+?>
