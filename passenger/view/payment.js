@@ -1,4 +1,4 @@
- 
+  
 document.getElementById("paymentForm").addEventListener("submit", function(e) {
 
     let amount = document.getElementById("amount").value.trim();
@@ -16,7 +16,6 @@ document.getElementById("paymentForm").addEventListener("submit", function(e) {
     }
 });
 
-
  
 function updateBalance() {
     const xhttp = new XMLHttpRequest();
@@ -30,6 +29,7 @@ function updateBalance() {
 
  
 updateBalance();
-
-
 setInterval(updateBalance, 3000);
+
+ 
+ 
