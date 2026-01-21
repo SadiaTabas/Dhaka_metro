@@ -73,9 +73,9 @@ $_SESSION['RoleID'] = $roleID;
 
 /* -------- Role Based Redirect -------- */
 if ($roleID == 1) {
-    header("Location: /admin/view/adminDashboard.php");
+    header("Location: /Dhaka_metro/admin/view/admindashboard.php");
 } elseif ($roleID == 3) {
-      header("Location: /user/view/dashboard.php");
+    header("Location: /Dhaka_metro/passenger/view/dashboard.php");
 } elseif ($roleID == 2) {
     header("Location: ../View/php/employeDashboard.php");
 } else {
