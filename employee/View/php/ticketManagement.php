@@ -1,13 +1,14 @@
 <?php
 session_start();
 
-// Get session message and clear it
+
 $message = $_SESSION['msg'] ?? '';
-unset($_SESSION['msg']); 
+unset($_SESSION['msg']);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,7 @@ unset($_SESSION['msg']);
     <link rel="stylesheet" href="../css/headerFooter.css">
     <link rel="stylesheet" href="../css/ticketManagement.css">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -25,21 +27,19 @@ unset($_SESSION['msg']);
     <!-- Form Wrapper -->
     <div class="container">
         <form method="POST" action="../../Controller/ticketManagementHandle.php" id="ticketManagementForm">
-            
+
             <h2 class="form-title">Ticket Management</h2>
 
             <!-- PHP status message -->
             <?php if ($message): ?>
-                <div class="status-msg <?php 
-                    echo strpos(strtolower($message), 'confirm') !== false ? "status-confirm" : "status-cancel"; 
-                ?>">
+                <div class="status-msg <?php echo $message === "ticket confirm" ? "status-confirm" : "status-cancel"; ?>">
                     <?php echo htmlspecialchars($message); ?>
                 </div>
             <?php endif; ?>
 
             <div class="row">
-                <label>Mobile Number</label>
-                <input type="text" name="mobile_number" placeholder="Enter User Mobile Number">
+                <label>Ticket ID</label>
+                <input type="text" name="ticket_id" placeholder="Enter Ticket ID">
             </div>
 
             <div class="row">
@@ -58,7 +58,7 @@ unset($_SESSION['msg']);
             </div>
 
             <div class="note">
-                Make sure to verify the mobile number and action before submitting
+                Make sure to verify the ticket ID and action before submitting
             </div>
         </form>
     </div>
@@ -70,4 +70,4 @@ unset($_SESSION['msg']);
     <script src="../js/ticketManagement.js"></script>
 
 </body>
-</html>
+
